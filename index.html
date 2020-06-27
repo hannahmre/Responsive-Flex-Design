@@ -15,12 +15,12 @@
             /* float: left; */
         }
         
-        h1 {
-            flex-grow: 1;
-        }
-        
         .image2 {
             order: 1;
+        }
+        
+        h1 {
+            flex-grow: 1;
         }
         
         .container {
@@ -29,11 +29,30 @@
         
         .links {
             order: 1;
-            flex-grow: 2;
         }
         
-        .content {
-            flex-grow: 2;
+        @media (max-width: 500px) {
+            header {
+                flex-wrap: wrap;
+            }
+            .image1 {
+                order: 1;
+            }
+        }
+        
+        @media (max-width: 750px) {
+            .container {
+                flex-wrap: wrap;
+            }
+            .links {
+                flex-grow: 1;
+            }
+        }
+        
+        @media (min-width: 750px) {
+            .links {
+                flex-basis: 650px;
+            }
         }
     </style>
 </head>
